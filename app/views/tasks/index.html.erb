@@ -1,0 +1,18 @@
+<div class="row justify-content-center">
+
+  <h1>TASKS 📅 💪</h1>
+
+  <div>
+    <ul>
+      <% @tasks.each do |t| %>
+        <li>
+          <%= link_to t.title, task_path(t) %>
+        </li>
+      <% end %>
+    </ul>
+
+  </div>
+
+</div>
+<p><%= link_to "Create a New Task", new_task_path %></p>
+
